@@ -5,7 +5,7 @@ import * as constants from './constants';
 const isAuth = JSON.parse(localStorage.getItem("isAuth"));
 
 const initialState = {
-  isAuth: false,
+  isAuth: true,
   loader: false,
   success: {}
 };
@@ -21,7 +21,7 @@ const isLogin = (state=initialState, action) => {
   switch (action.type) {
     case constants.CHECK_IS_LOGIN:
       if (isAuth) {
-        return {...state, isAuth: false};
+        return {...state, isAuth: true};
       } else {
         return {...state, isAuth: false};
       }

@@ -22,24 +22,12 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
                 <input type="text" name="Date" placeholder="11/19" />
             </div>
           </div>
-          <div>
             <div>
-                <label>Имя владельца</label>
+                <input type="surname" name="surname" label="surname" placeholder="Surname" />
             </div>
-            <div>
-                <input type="text" name="CardName" placeholder="User Name" />
-            </div>
-            <div>
-              <label>CVC</label>
-              <input type="text" name="cvc" placeholder="CVC" />
-            </div>
-          </div>
-          <div>
-            <button>Сохранить</button>
-          </div>
+            <button>signup</button>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  

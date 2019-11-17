@@ -11,7 +11,6 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
         <h1>Профиль</h1>
         <p>Способ оплаты</p>
         <form>
-          <div>
             <div>
                 <label>Номер карты</label>
             </div>
@@ -19,27 +18,14 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
                 <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
             </div>
             <div>
-                <input type="text" name="Date" placeholder="11/19" />
-            </div>
-          </div>
-          <div>
-            <div>
-                <label>Имя владельца</label>
+                <input type="text" name="name" label="name" placeholder="Name" />
             </div>
             <div>
-                <input type="text" name="CardName" placeholder="User Name" />
+                <input type="surname" name="surname" label="surname" placeholder="Surname" />
             </div>
-            <div>
-              <label>CVC</label>
-              <input type="text" name="cvc" placeholder="CVC" />
-            </div>
-          </div>
-          <div>
-            <button>Сохранить</button>
-          </div>
+            <button>signup</button>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  

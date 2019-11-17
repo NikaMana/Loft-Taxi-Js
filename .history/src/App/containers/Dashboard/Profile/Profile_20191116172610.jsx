@@ -35,11 +35,10 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
             </div>
           </div>
           <div>
-            <button>Сохранить</button>
+            <button>signup</button>
           </div>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  

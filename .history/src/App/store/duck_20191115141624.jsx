@@ -17,11 +17,11 @@ export const actions = {
   logInFailure: createAction(constants.LOG_IN_FAILURE)
 };
 
-const isLogin = (state=initialState, action) => {
+const isLogin = (state=initialState, action: any) => {
   switch (action.type) {
     case constants.CHECK_IS_LOGIN:
       if (isAuth) {
-        return {...state, isAuth: false};
+        return {...state, isAuth: true};
       } else {
         return {...state, isAuth: false};
       }

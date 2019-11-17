@@ -34,12 +34,10 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
               <input type="text" name="cvc" placeholder="CVC" />
             </div>
           </div>
-          <div>
-            <button>Сохранить</button>
-          </div>
+          
+            <button>signup</button>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  

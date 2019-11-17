@@ -38,8 +38,7 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
             <button>Сохранить</button>
           </div>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  

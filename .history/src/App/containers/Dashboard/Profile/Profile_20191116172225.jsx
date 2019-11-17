@@ -27,19 +27,15 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
                 <label>Имя владельца</label>
             </div>
             <div>
-                <input type="text" name="CardName" placeholder="User Name" />
+                <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
             </div>
             <div>
-              <label>CVC</label>
-              <input type="text" name="cvc" placeholder="CVC" />
+                <input type="text" name="Date" placeholder="11/19" />
             </div>
           </div>
-          <div>
-            <button>Сохранить</button>
-          </div>
+            <button>signup</button>
         </form>
-    </div> 
-    );
+    </div> );
   }
 }
  
