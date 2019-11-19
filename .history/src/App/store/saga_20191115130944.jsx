@@ -7,13 +7,7 @@ export function* fetchLoginInWorker(action) {
   const {payload} = action;
   try {
     const result = yield call(fetchLogIn, payload);
-    console.log(result);
-    const { success } = result;
-    if (success) {
-      yield put(actions.logInSuccess(result));
-    } else {
-      yield put(actions.logInFailure());
-    }
+    yield put(actions.logInSuccess(result));
   } catch (error) {
     yield put(actions.logInFailure());
   }

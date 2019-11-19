@@ -6,7 +6,7 @@ const isAuth = JSON.parse(localStorage.getItem("isAuth"));
 
 const initialState = {
   isAuth: true,
-  loader: false,
+  loader: true,
   success: {}
 };
 

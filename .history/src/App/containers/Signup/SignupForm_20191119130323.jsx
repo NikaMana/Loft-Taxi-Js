@@ -46,10 +46,23 @@ class Login extends Component {
       return <Redirect path="/login" to="/dashboard/map"></Redirect>
     }
     return (
-      <h1>Войти</h1>
-      <p>Новый пользователь?</p><link to="../Signup/SignupForm">Зарегистрируйтесь</link>
+      <h1>Регистрация</h1>
+      <p>Уже зарегистрированы?</p><link to="../Login">Войти</link>
       <form onSubmit={this.handleSubmit}>
-        <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
+        <div>
+          <label>Адрес электронной почты</label>
+          <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
+        </div>
+        <div>
+          <input name="name" placeholder="Имя" />
+        </div>
+        <div>
+          <input name="surname" placeholder="Фамилия" />
+        </div>
+        <div>
+          <label>Адрес электронной почты</label>
+          <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
+        </div>
         <input value={password} name="password" placeholder="Password" onChange={this.handleChange}/>
         <button type="submit">SEND</button>
       </form>

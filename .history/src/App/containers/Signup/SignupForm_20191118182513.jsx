@@ -3,15 +3,15 @@ import React from 'react';
 class Profile extends React.Component {
   render() { 
     return ( <div>
-        <h1>Профиль</h1>
-        <p>Способ оплаты</p>
+        <h1>Регистрация</h1>
+        <p>Уже зарегистрированы?</p><link>Войти</link>
         <form>
           <div>
             <div>
-                <label>Номер карты</label>
+                <label>Адрес электронной почты</label>
             </div>
             <div>
-                <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
+                <input type="text" name="EmailAdress" placeholder="Адрес электронной почты" />
             </div>
             <div>
                 <input type="text" name="Date" placeholder="11/19" />

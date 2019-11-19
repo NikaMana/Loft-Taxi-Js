@@ -46,8 +46,7 @@ class Login extends Component {
       return <Redirect path="/login" to="/dashboard/map"></Redirect>
     }
     return (
-      <h1>Войти</h1>
-      <p>Новый пользователь?</p><link to="../Signup/SignupForm">Зарегистрируйтесь</link>
+      <h1></h1>
       <form onSubmit={this.handleSubmit}>
         <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
         <input value={password} name="password" placeholder="Password" onChange={this.handleChange}/>

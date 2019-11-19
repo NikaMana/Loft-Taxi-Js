@@ -5,7 +5,7 @@ import * as constants from './constants';
 const isAuth = JSON.parse(localStorage.getItem("isAuth"));
 
 const initialState = {
-  isAuth: true,
+  isAuth: false,
   loader: false,
   success: {}
 };
