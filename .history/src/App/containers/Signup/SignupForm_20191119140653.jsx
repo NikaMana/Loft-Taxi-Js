@@ -1,8 +1,8 @@
-import React from "react";
-import useForm from 'react-hook-dom';
-import { withRouter } from 'react-router-dom';
-import {useStateMachine} from 'little-state-machine';
-import updateAction from './updateAction';
+import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
+import { isLoginSelector } from '../../store/selectors';
+import {actions} from '../../store/duck';
+import {connect} from 'react-redux';
 
 const Registration = props => {
   const { register, handleSubmit } = useForm();
@@ -20,14 +20,14 @@ const Registration = props => {
           <input name="email" placeholder="Email" ref={register}/>
         </div>
         <div>
-          <input name="name" placeholder="Имя" ref={register}/>
+          <input name="name" placeholder="Имя" />
         </div>
         <div>
-          <input name="surname" placeholder="Фамилия" ref={register}/>
+          <input name="surname" placeholder="Фамилия" />
         </div>
         <div>
           <label>Пароль</label>
-          <input name="password" placeholder="Password" ref={register}/>
+          <input value={password} name="password" placeholder="Password" onChange={this.handleChange}/>
         </div>        
         <button type="submit">Войти</button>
       </form>
@@ -35,4 +35,4 @@ const Registration = props => {
   }
 }
  
-export default withRouter(Registration);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -1,8 +1,8 @@
-import React from "react";
-import useForm from 'react-hook-dom';
+import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
-import {useStateMachine} from 'little-state-machine';
-import updateAction from './updateAction';
+import { isLoginSelector } from '../../store/selectors';
+import {actions} from '../../store/duck';
+import {connect} from 'react-redux';
 
 const Registration = props => {
   const { register, handleSubmit } = useForm();
