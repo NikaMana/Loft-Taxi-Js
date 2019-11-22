@@ -11,7 +11,7 @@ const Header = () => {
       <NavLink to="/dashboard/profile">PROFILE</NavLink>
     </div>
     <div>
-      <NavLink to="../login/">EXIT</NavLink>
+      <NavLink to="../../Login">EXIT</NavLink>
     </div>
   </div>
   );

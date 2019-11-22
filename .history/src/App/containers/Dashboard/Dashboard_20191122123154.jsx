@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Switch, Route } from 'react-router-dom';
 import Map from './Map';
 import Profile from './Profile';
-import Login from '../Login';
 
 class Dashboard extends Component {
   render() {
@@ -10,7 +9,7 @@ class Dashboard extends Component {
       <Switch>
         <Route path="/dashboard/profile" commponent={Profile}></Route>
         <Route path="/dashboard/map" commponent={Map}></Route>
-        <Route path="/login" commponent={Login}></Route>
+        
       </Switch>
     </div>;
   }

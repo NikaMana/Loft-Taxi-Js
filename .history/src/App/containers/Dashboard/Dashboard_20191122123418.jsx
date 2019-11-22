@@ -10,7 +10,7 @@ class Dashboard extends Component {
       <Switch>
         <Route path="/dashboard/profile" commponent={Profile}></Route>
         <Route path="/dashboard/map" commponent={Map}></Route>
-        <Route path="/login" commponent={Login}></Route>
+        <Route path="../Login" commponent={Login}></Route>
       </Switch>
     </div>;
   }
