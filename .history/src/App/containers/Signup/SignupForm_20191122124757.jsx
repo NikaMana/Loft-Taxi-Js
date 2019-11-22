@@ -80,7 +80,7 @@ class Register extends Component {
     const {email, password} = this.state;
     const {isRegister} = this.props;
     if (isRegister) {
-      return <Redirect path="/login" to="/dashboard/map"></Redirect>
+      return <Redirect path="/login" to="/login"></Redirect>
     }
     return (
       <div>
@@ -89,6 +89,7 @@ class Register extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Адрес электронной почты</label>
           <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
+          <input name="name" placeholder="Имя" />
           <label>Пароль</label>
           <input value={password} name="password" placeholder="Password" onChange={this.handleChange}/>
           <button type="submit">SEND</button>
