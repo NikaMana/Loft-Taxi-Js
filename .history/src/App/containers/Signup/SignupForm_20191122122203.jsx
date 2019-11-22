@@ -1,39 +1,39 @@
-// import React from "react";
-// import useForm from 'react-hook-dom';
-// import { withRouter } from 'react-router-dom';
-// import {useStateMachine} from 'little-state-machine';
-// import updateAction from './updateAction';
+import React from "react";
+import useForm from 'react-hook-dom';
+import { withRouter } from 'react-router-dom';
+import {useStateMachine} from 'little-state-machine';
+import updateAction from './updateAction';
 
-// const Registration = props => {
-//   const { register, handleSubmit } = useForm();
-//   const { action } = useStateMachine(updateAction);
-//   const onSubmit = data => {
-//     action(data);
-//   }
-// }
-//     return (
-//       <form onSubmit={handleSubmit(onSubit)}>
-//         <h1>Регистрация</h1>
-//         <p>Уже зарегистрированы?</p>
-//         <div>
-//           <label>Адрес электронной почты</label>
-//           <input name="email" placeholder="Email" />
-//         </div>
-//         <div>
-//           <input name="name" placeholder="Имя" />
-//         </div>
-//         <div>
-//           <input name="surname" placeholder="Фамилия" />
-//         </div>
-//         <div>
-//           <label>Пароль</label>
-//           <input name="password" placeholder="Password" />
-//         </div>        
-//         <button type="submit">Войти</button>
-//       </form>
-//     );
-//   };
-// };
+const Registration = props => {
+  const { register, handleSubmit } = useForm();
+  const { action } = useStateMachine(updateAction);
+  const onSubmit = data => {
+    action(data);
+  }
+}
+    return (
+      <form onSubmit={handleSubmit(onSubit)}>
+        <h1>Регистрация</h1>
+        <p>Уже зарегистрированы?</p>
+        <div>
+          <label>Адрес электронной почты</label>
+          <input name="email" placeholder="Email" />
+        </div>
+        <div>
+          <input name="name" placeholder="Имя" />
+        </div>
+        <div>
+          <input name="surname" placeholder="Фамилия" />
+        </div>
+        <div>
+          <label>Пароль</label>
+          <input name="password" placeholder="Password" />
+        </div>        
+        <button type="submit">Войти</button>
+      </form>
+    );
+  };
+};
 
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
@@ -89,7 +89,6 @@ class Register extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Адрес электронной почты</label>
           <input value={email} name="email" placeholder="Email" onChange={this.handleChange}/>
-          <label>Пароль</label>
           <input value={password} name="password" placeholder="Password" onChange={this.handleChange}/>
           <button type="submit">SEND</button>
         </form>
@@ -129,4 +128,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Register);
 //   }
 // }
  
-// export default withRouter(Registration);
+export default withRouter(Registration);
