@@ -35,18 +35,6 @@ const Registration = props => {
   };
 };
 
-{/* <label for="inputEmail" className="sr-only">Email address</label>
-<input type="email" onChange={this.handleEmailChange} id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
-<label for="inputPassword" className="sr-only">Password</label>
-<input type="password" onChange={this.handlePasswordChange} id="inputPassword" className="form-control" placeholder="Password" required /> */}
-
-// handleEmailChange(e){
-//   this.setState({email:e.target.value})
-// }
-// handlePasswordChange(e){
-//   this.setState({password:e.target.value})
-// }
-
 // class Signin extends React.Component {
 //   render() {
 //       return (
