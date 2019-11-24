@@ -9,7 +9,6 @@
     "@types/react-redux": "^7.1.5",
     "@types/react-router-dom": "^5.1.2",
     "@types/redux-actions": "^2.6.1",
-    "babel-loader": "^8.0.6",
     "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -36,11 +35,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "CI=true yarn test"
-    }
   },
   "browserslist": {
     "production": [

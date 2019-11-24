@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-class Profile extends Component {
+class Card extends Component {
   state = {
     cardNumber: "0000 0000 0000 0000",
     expiryDate: "",
@@ -44,44 +44,25 @@ class Profile extends Component {
     }
   };
   render() {
-    const {cardnumber, expirydate, cardname, cvc, token} = this.state;
-    const {isProfile} = this.props;
-    if (isProfile) {
+    const {email, password} = this.state;
+    const {isLogin, isNewUser, toggleNewUser, signUp} = this.props;
+    if (isLogin) {
       return <Redirect path="/login" to="/dashboard/map"></Redirect>
     }
     return (
       <div>
-        <h1>Профиль</h1>
-         <p>Способ оплаты</p>
-         <form>
-           <div>
-             <div>
-                 <label>Номер карты</label>
-             </div>
-             <div>
-                 <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
-             </div>
-             <div>
-                 <input type="text" name="Date" placeholder="11/19" />
-             </div>
-           </div>
-           <div>
-             <div>
-                 <label>Имя владельца</label>
-             </div>
-             <div>
-                 <input type="text" name="CardName" placeholder="User Name" />
-             </div>
-             <div>
-               <label>CVC</label>
-               <input type="text" name="cvc" placeholder="CVC" />
-             </div>
-           </div>
-           <div>
-             <button>Сохранить</button>
-           </div>
-         </form>
+        <h1>Войти</h1>
+        {!isNewUser && (
+          <div>
+            <p>Новый пользователь? Давай зарегистрируемся!</p>
+            <div>
+              <button onClick={() => toggleNewUser()}>
+                Зарегистрироваться
+              </button>
+            </div>
           </div>
+        )}
+      </div>
     );
   }
 }

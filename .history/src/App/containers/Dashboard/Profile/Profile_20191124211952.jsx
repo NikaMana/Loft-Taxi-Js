@@ -44,44 +44,46 @@ class Profile extends Component {
     }
   };
   render() {
-    const {cardnumber, expirydate, cardname, cvc, token} = this.state;
-    const {isProfile} = this.props;
-    if (isProfile) {
+    const {cardname, expirydate, cardname, cvc, token} = this.state;
+    const {isCard} = this.props;
+    if (isCard) {
       return <Redirect path="/login" to="/dashboard/map"></Redirect>
     }
     return (
       <div>
         <h1>Профиль</h1>
-         <p>Способ оплаты</p>
-         <form>
-           <div>
-             <div>
-                 <label>Номер карты</label>
-             </div>
-             <div>
-                 <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
-             </div>
-             <div>
-                 <input type="text" name="Date" placeholder="11/19" />
-             </div>
-           </div>
-           <div>
-             <div>
-                 <label>Имя владельца</label>
-             </div>
-             <div>
-                 <input type="text" name="CardName" placeholder="User Name" />
-             </div>
-             <div>
-               <label>CVC</label>
-               <input type="text" name="cvc" placeholder="CVC" />
-             </div>
-           </div>
-           <div>
-             <button>Сохранить</button>
-           </div>
-         </form>
+//         <p>Способ оплаты</p>
+//         <form>
+//           <div>
+//             <div>
+//                 <label>Номер карты</label>
+//             </div>
+//             <div>
+//                 <input type="text" name="CardNumber" placeholder="0000 0000 0000 0000" />
+//             </div>
+//             <div>
+//                 <input type="text" name="Date" placeholder="11/19" />
+//             </div>
+//           </div>
+//           <div>
+//             <div>
+//                 <label>Имя владельца</label>
+//             </div>
+//             <div>
+//                 <input type="text" name="CardName" placeholder="User Name" />
+//             </div>
+//             <div>
+//               <label>CVC</label>
+//               <input type="text" name="cvc" placeholder="CVC" />
+//             </div>
+//           </div>
+//           <div>
+//             <button>Сохранить</button>
+//           </div>
+//         </form>
           </div>
+        )}
+      </div>
     );
   }
 }

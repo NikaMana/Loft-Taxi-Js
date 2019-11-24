@@ -15,4 +15,3 @@ class Map extends React.Component<MapProps, MapState> {
 }
  
 export default Map;
-
