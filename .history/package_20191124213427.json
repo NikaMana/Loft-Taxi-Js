@@ -37,6 +37,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  // "husky": {
+  //   "hooks": {
+  //     "pre-commit": "CI=true yarn test"
+  //   }
+  // },
   "browserslist": {
     "production": [
       ">0.2%",
